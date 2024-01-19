@@ -1,0 +1,7 @@
+Column Name,customer_no,age,start_date
+Columns Type,(integer),(integer),(datetime)
+Description,Customer Number,Age of Customer,Date customer started with bank
+Sample Rows,1232,19,2005-01-20 0:00:00
+,1249,76,2002-05-23 0:00:00
+,1255,45,1999-04-03 0:00:00
+,1268,32,2008-07-16 0:00:00

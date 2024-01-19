@@ -1,0 +1,10 @@
+Column Name,customer_no,account_no,trans_date,trans_type,amount
+Columns Type,(integer),(string),(datetime),(string),(decimal)
+Description,Customer Number,Account Number,Date of Transaction,"Type of Transaction (D - Debit, C - Credit)",Account of transaction
+Sample Rows,1232,000650023XXXXXX1234,2018-12-20 0:00:00,D,25.56
+,1232,000650023XXXXXX1234,2019-01-03 0:00:00,C,510
+,1232,000650023XXXXXX9876,2018-05-12 0:00:00,D,1250
+,1232,000650023XXXXXX9876,2019-03-19 0:00:00,D,49.45
+,1255,0050000000012345600,2018-09-12 0:00:00,D,1520
+,1255,0050000000012345600,2018-11-05 0:00:00,D,96.55
+,1255,0050000000012345600,2018-05-04 0:00:00,D,205.12

@@ -1,0 +1,7 @@
+Column Name,customer_no,card_no,open_date,bill_acct
+Columns Type,(string),(string),(integer),(string)
+Description,Customer Number,Credit Card Account Number,Date credit card account was opened in yyyymmdd format,"Indicator if account is a billing account (Y-Yes, N-No)"
+Sample Rows,1232,650023xxxxxx1234,20011017,N
+,1232,650023xxxxxx9876,20050105,N
+,1255,650010xxxxxx4569,20001216,N
+,1255,650055xxxxxx2358,20001207,Y

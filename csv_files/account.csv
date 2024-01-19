@@ -1,0 +1,12 @@
+Column Name,customer_no,account_no,product_type_code,account_status,open_date
+Columns Type,(integer),(string),(string),(string),(datetime)
+Description,Customer Number,Account Number,Product Type Code,"Status of Account (O=Open, C=Closed)",Date account was opened (for credit cards this is the date the current card was activated)
+Sample Rows,1232,000650023XXXXXX1234,CCRD,O,2016-05-23 0:00:00
+,1232,000650023XXXXXX9876,CCRD,O,2018-06-20 0:00:00
+,1232,0002000004567899812,TRAN,O,2016-05-23 0:00:00
+,1249,0001000001234567801,TRAN,C,2005-08-12 0:00:00
+,1249,0001000001234567802,SAVG,O,2011-05-06 0:00:00
+,1255,000650010XXXXXX4569,BUSS,O,2014-02-20 0:00:00
+,1255,000650055XXXXXX2358,BUSS,O,2014-03-19 0:00:00
+,1255,0050000000012345600,HMLN,O,2017-02-02 0:00:00
+,1268,0050000000098765411,HMLN,O,2010-09-20 0:00:00
