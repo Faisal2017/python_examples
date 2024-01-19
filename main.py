@@ -11,8 +11,8 @@ from question_3_sql import Q_3_sql
 
 DF_LIST = {}
 
-# csv to df data types
-dataframe_types = {
+# csv to df data type mapping
+DATAFRAME_TYPES = {
     'string': 'object',
     'integer': 'int',
     'datetime': 'datetime64[ns]',
@@ -38,7 +38,7 @@ def read_csv_files_anc_convert_to_df():
         for i, v in data_types.items():
             v2 = v.replace('(', '').replace(')', '')
 
-            convert_type_to_df_type = dataframe_types[v2]
+            convert_type_to_df_type = DATAFRAME_TYPES[v2]
 
             transaction_data_types[i] = convert_type_to_df_type
 
