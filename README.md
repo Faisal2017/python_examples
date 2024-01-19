@@ -11,9 +11,13 @@ Make sure you have Python3 installed:
 python3 --version
 ```
 
-Install the packages required and run main.py to see the results printed to the console
+Install a virtual environment, activate the virtual environment,
+install the packages required and run main.py to see the results printed to the console
 
 ```commandline
+python3 -m venv .venv
+source .venv/bin/activate
+
 pip install -r requirements.txt
-python main.py
+python3 main.py
 ```
