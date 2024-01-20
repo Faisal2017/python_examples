@@ -11,7 +11,7 @@ from question_3_sql import Q_3_sql
 
 DF_LIST = {}
 
-# csv to df data type mapping
+# csv to df data type mappings
 DATAFRAME_TYPES = {
     'string': 'object',
     'integer': 'int',
@@ -24,10 +24,10 @@ def read_csv_files_anc_convert_to_df():
     cwd = os.getcwd()
     all_csv_files = glob.glob(os.path.join(cwd, "csv_files/*.csv"))
 
-    transaction_data_types = {}
-
     for csv_file in all_csv_files:
         csv_name = csv_file.split('.')[0].split('/')[-1]
+
+        transaction_data_types = {}
 
         df = pd.read_csv(csv_file)
 
@@ -46,29 +46,25 @@ def read_csv_files_anc_convert_to_df():
 
         DF_LIST[csv_name] = final_df
 
-        transaction_data_types = {}
-
 
 if __name__ == "__main__":
     read_csv_files_anc_convert_to_df()
 
     # convert DF_LIST to top level variables i.e. variable DF_LIST['account'] becomes account
-    # allows duckdb to pick up df's automatically
+    # allows duckdb to pick up df's automatically for SQL queries
     for key, val in DF_LIST.items():
         exec(key + '=val')
 
     q_1 = duckdb.query(Q_1_SQL)
     print('Question 1 : ', q_1)
-    # TODO ? Better way to select valid accounts other than specifying all product types ??
 
     q_2 = duckdb.query(Q_2_SQL)
+    # Note - use this date in SQL to bring some rows back
+    # WHERE date_trunc('day', account_open_date) > '2016-07-01'
     print('Question 2 : ', q_2)
 
-    # TODO - use this as per question, as using earlier date to pull thru some rows
-    # WHERE date_trunc('day', account_open_date) = '2018-07-01';
-
     q_3 = duckdb.query(Q_3_sql)
+    # Note - use this date in SQL to bring some rows back
+    # WHERE date_trunc('day', account_open_date) > '2000-07-01'
     print('Question 3 : ', q_3)
 
-    # TODO - use this as per question, as using earlier date to pull thru some rows
-    # WHERE date_trunc('day', account_open_date) = '2018-07-01';

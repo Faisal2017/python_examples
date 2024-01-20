@@ -38,7 +38,7 @@ Q_2_SQL = """
             open_since_2018 AS (
             
                 SELECT * FROM valid_accounts
-                WHERE date_trunc('day', account_open_date) > '2016-07-01'
+                WHERE date_trunc('day', account_open_date) > '2018-07-01'
 
             ),
             
