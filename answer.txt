@@ -1,0 +1,55 @@
+Main idea was to use SQL because these kind of tables would generally be in a data warehouse
+and easily queried against (i.e. AWS RDS, GCP BigQuery, any of the relational databases like PostgreSQL, etc)
+
+Used Panda dataframes as these can also be queried against (i.e. without using SQL)
+but aware that this can be memory intensive and for large datasets this can be an obstacle.
+
+Running duckdb through the command line would be an alternative
+(example: https://www.youtube.com/watch?v=4vM-LR9Z-Fc)
+
+Potential add-ons:
+
+- using PyArrow if large dataset causing memory issues with Pandas
+- solution using Panda's alone (i.e. not using SQL)
+- commands to run through cli using duckdb (avoiding memory issues using Pandas)
+
+Notes
+
+- Assumptions being made
+
+If account_no in account matches credit_card_account = then assuming this is a credit card (i.e. not sure if product type should have an effect on this)
+
+Applying conditions set before questions so using dates supplied means no rows are being pulled through.
+
+
+ANSWERS
+
+Q1.
+
+│     account_no      │  account_open_date  │
+│       varchar       │    timestamp_ns     │
+├─────────────────────┼─────────────────────┤
+│ 000650023XXXXXX1234 │ 2001-10-17 00:00:00 │
+│ 000650023XXXXXX9876 │ 2005-01-05 00:00:00 │
+│ 000650055XXXXXX2358 │ 2000-12-07 00:00:00 │
+│ 0002000004567899812 │ 2016-05-23 00:00:00 │
+│ 0001000001234567802 │ 2011-05-06 00:00:00 │
+│ 0050000000012345600 │ 2017-02-02 00:00:00 │
+│ 0050000000098765411 │ 2010-09-20 00:00:00 │
+└─────────────────────┴─────────────────────┘
+
+Q2.
+
+│ customer_no │
+│    int64    │
+├─────────────┤
+│   0 rows    │
+└─────────────┘
+
+Q3.
+
+│ Age Band │ % with Credit Card │
+│ varchar  │      varchar       │
+├───────────────────────────────┤
+│            0 rows             │
+└───────────────────────────────┘
