@@ -17,7 +17,8 @@ Notes
 
 - Assumptions being made
 
-If account_no in account matches credit_card_account = then assuming this is a credit card (i.e. not sure if product type should have an effect on this)
+If account_no in account matches credit_card_account = then assuming this is a credit card
+(i.e. not sure if product type should have an effect on this)
 
 Applying conditions set before questions so using dates supplied means no rows are being pulled through.
 
